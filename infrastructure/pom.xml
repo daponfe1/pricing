@@ -18,7 +18,6 @@
     </modules>
 
     <dependencies>
-        <!-- Internal -->
         <dependency>
             <groupId>com.inditex</groupId>
             <artifactId>application</artifactId>

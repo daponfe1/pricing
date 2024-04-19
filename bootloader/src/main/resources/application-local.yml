@@ -1,0 +1,5 @@
+spring:
+  config:
+    import:
+      - classpath:properties/local/h2.yml
+      - classpath:properties/local/logging.yml

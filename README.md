@@ -1,21 +1,11 @@
-# Getting Started
+# Pricing microservice
 
-### Reference Documentation
-
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.4/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.4/maven-plugin/reference/html/#build-image)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.2.4/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.4/reference/htmlsingle/index.html#web)
-
-### Guides
-
-The following guides illustrate how to use some features concretely:
-
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-
+- OpenAPI documentation:
+  - this application uses openAPI to expose publicly the restAPI documentation. 
+- testing:
+  - rest-api (controller) layer, so we can test not only the http response and the request validation.
+  - interactor (service) layer, so we can test business logic.
+- improvements:
+  - centralise configuration properties in a remote service which shares all common properties between related microservices.
+  - add web security via token.
+  - add pr-check and deployment github actions.
