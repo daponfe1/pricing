@@ -24,11 +24,7 @@ public interface PricingAPI {
             in = ParameterIn.QUERY,
             name = "applicationDate",
             description = "Applying date of the pricing",
-            schema = @Schema(implementation = LocalDateTime.class)),
-        @Parameter(
-            in = ParameterIn.QUERY,
-            name = "endDate",
-            description = "End date of the pricing application",
+            example = "2020-01-01T01:00:00",
             schema = @Schema(implementation = LocalDateTime.class)),
         @Parameter(
             in = ParameterIn.QUERY,
