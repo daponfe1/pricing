@@ -17,10 +17,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>application</module>
         <module>domain</module>
+        <module>application</module>
         <module>infrastructure</module>
-        <module>bootloader</module>
     </modules>
 
     <properties>
@@ -37,17 +36,12 @@
         <dependencies>
             <dependency>
                 <groupId>com.inditex</groupId>
-                <artifactId>main</artifactId>
+                <artifactId>domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.inditex</groupId>
                 <artifactId>application</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.inditex</groupId>
-                <artifactId>domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -122,6 +116,13 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions.maven.plugin.version}</version>
+            </plugin>
+
             <plugin>
                 <groupId>com.spotify.fmt</groupId>
                 <artifactId>fmt-maven-plugin</artifactId>
