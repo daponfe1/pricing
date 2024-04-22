@@ -1,6 +1,11 @@
 package com.inditex.pricing.infrastructure.rest.api;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import com.inditex.pricing.domain.enums.Currency;
+import java.time.LocalDateTime;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,12 +14,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-
-import java.time.LocalDateTime;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -123,7 +122,7 @@ class PricingControllerTest {
         .andExpect(jsonPath("$.product_id", Is.is("35455")))
         .andExpect(jsonPath("$.brand_id", Is.is("1")))
         .andExpect(jsonPath("$.tariff_id", Is.is("4")))
-        .andExpect(jsonPath("$.start_date", Is.is("2020-06-16T15:00:00")))
+        .andExpect(jsonPath("$.start_date", Is.is("2020-06-15T16:00:00")))
         .andExpect(jsonPath("$.end_date", Is.is("2020-12-31T23:59:59")))
         .andExpect(jsonPath("$.price", Is.is(38.95)))
         .andExpect(jsonPath("$.currency", Is.is(Currency.EUR.name())));
