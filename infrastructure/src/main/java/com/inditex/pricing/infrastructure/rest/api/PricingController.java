@@ -25,5 +25,5 @@ public class PricingController implements PricingAPI {
       @RequestParam("product_id") String productId,
       @RequestParam("brand_id") String brandId) {
     return pricingMapper.map(getPricingUseCase.getPricing(applicationDate, productId, brandId));
- }
+  }
 }
