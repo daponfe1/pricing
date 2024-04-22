@@ -4,8 +4,7 @@
     <br />
     <br />
     <a>
-      <img src="https://img.freepik.com/free-vector/hand-drawn-cartoon-cash-register-illustration_23-2150946370.jpg?w=826&t=st=1713791010~exp=1713791610~hmac=e736c1c1f4932b02a0cc93950c334140578d3ad29e89b70acc4eb810d892bdbd
-">
+      <img src="https://img.freepik.com/free-vector/hand-drawn-cartoon-cash-register-illustration_23-2150946370.jpg?w=826&t=st=1713791010~exp=1713791610~hmac=e736c1c1f4932b02a0cc93950c334140578d3ad29e89b70acc4eb810d892bdbd">
     </a>
   </h1>
 </div>
