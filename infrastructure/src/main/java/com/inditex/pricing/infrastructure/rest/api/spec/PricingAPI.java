@@ -1,5 +1,6 @@
 package com.inditex.pricing.infrastructure.rest.api.spec;
 
+import com.inditex.pricing.application.exception.ApplicationException;
 import com.inditex.pricing.infrastructure.rest.api.responses.PricingResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -24,16 +25,18 @@ public interface PricingAPI {
             in = ParameterIn.QUERY,
             name = "applicationDate",
             description = "Applying date of the pricing",
-            example = "2020-01-01T01:00:00",
+            example = "2020-06-14T21:00:00",
             schema = @Schema(implementation = LocalDateTime.class)),
         @Parameter(
             in = ParameterIn.QUERY,
             name = "productId",
             description = "Product id",
+            example = "35455",
             schema = @Schema(type = "string")),
         @Parameter(
             in = ParameterIn.QUERY,
             name = "brandId",
+            example = "1",
             description = "Brand id of the product",
             schema = @Schema(type = "string")),
       },
@@ -51,7 +54,7 @@ public interface PricingAPI {
             content =
                 @Content(
                     mediaType = MediaType.APPLICATION_JSON_VALUE,
-                    schema = @Schema(implementation = ResponseStatusException.class)))
+                    schema = @Schema(implementation = ApplicationException.class)))
       })
   PricingResponseDTO getPricing(LocalDateTime applicationDate, String productId, String brandId);
 }
