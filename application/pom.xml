@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.inditex</groupId>
+        <groupId>com.inditex.pricing</groupId>
         <artifactId>pricing</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -14,7 +14,7 @@
     <dependencies>
         <!-- Internal -->
         <dependency>
-            <groupId>com.inditex</groupId>
+            <groupId>com.inditex.pricing</groupId>
             <artifactId>domain</artifactId>
         </dependency>
         <!-- Spring -->
@@ -35,5 +35,4 @@
             </exclusions>
         </dependency>
     </dependencies>
-
 </project>
