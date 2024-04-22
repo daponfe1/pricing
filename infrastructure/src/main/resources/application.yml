@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: pricing-app
+  config:
+    import:
+      - classpath:properties/jpa.yml
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    default-property-inclusion: NON_NULL
+
+openapi:
+  info:
+    title: pricing-app
+    description: 'Pricing app is under this gateway'
+  servers:
+    dev: https://gateway-dev.inditex.io
+    uat: https://gateway-stg.inditex.io
+    prod: https://gateway.inditex.com

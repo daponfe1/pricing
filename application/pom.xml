@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.inditex</groupId>
+        <groupId>com.inditex.pricing</groupId>
         <artifactId>pricing</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -14,7 +14,7 @@
     <dependencies>
         <!-- Internal -->
         <dependency>
-            <groupId>com.inditex</groupId>
+            <groupId>com.inditex.pricing</groupId>
             <artifactId>domain</artifactId>
         </dependency>
         <!-- Spring -->
@@ -22,12 +22,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- Test -->
+        <!--Test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
-
 </project>

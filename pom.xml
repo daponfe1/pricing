@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.inditex</groupId>
+    <groupId>com.inditex.pricing</groupId>
     <artifactId>pricing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pricing</name>
@@ -17,11 +17,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>application</module>
         <module>domain</module>
+        <module>application</module>
         <module>infrastructure</module>
-        <module>main</module>
-        <module>integration</module>
+<!--        <module>main</module>-->
     </modules>
 
     <properties>
@@ -37,23 +36,18 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.inditex</groupId>
-                <artifactId>application</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.inditex</groupId>
+                <groupId>com.inditex.pricing</groupId>
                 <artifactId>domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.inditex</groupId>
-                <artifactId>infrastructure-rest-api</artifactId>
+                <groupId>com.inditex.pricing</groupId>
+                <artifactId>application</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.inditex</groupId>
-                <artifactId>infrastructure-adapter-database</artifactId>
+                <groupId>com.inditex.pricing</groupId>
+                <artifactId>infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
@@ -65,11 +59,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-test</artifactId>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -123,6 +112,13 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions.maven.plugin.version}</version>
+            </plugin>
+
             <plugin>
                 <groupId>com.spotify.fmt</groupId>
                 <artifactId>fmt-maven-plugin</artifactId>
@@ -135,20 +131,18 @@
                     </execution>
                 </executions>
             </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <excludes>-->
-<!--                        <exclude>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                        </exclude>-->
-<!--                    </excludes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
