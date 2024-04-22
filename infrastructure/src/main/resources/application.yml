@@ -13,6 +13,7 @@ openapi:
     title: pricing-app
     description: 'Pricing app is under this gateway'
   servers:
+    local: http://localhost:8080
     dev: https://gateway-dev.inditex.io
     uat: https://gateway-stg.inditex.io
     prod: https://gateway.inditex.com
