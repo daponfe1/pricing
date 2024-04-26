@@ -11,7 +11,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.time.LocalDateTime;
 import org.springframework.http.MediaType;
-import org.springframework.web.server.ResponseStatusException;
 
 @Tag(name = "/api/v1/pricing")
 public interface PricingAPI {

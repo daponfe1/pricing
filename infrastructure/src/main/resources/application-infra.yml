@@ -2,4 +2,3 @@ spring:
   config:
     import:
       - classpath:properties/infra/h2.yml
-      - classpath:properties/infra/logging.yml

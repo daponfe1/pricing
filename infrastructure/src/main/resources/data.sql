@@ -1,0 +1,11 @@
+insert into product (additional,id) values ('white shirt', 1);
+insert into product (additional,id) values ('white shirt', 35455);
+insert into brand (name,id) values ('ZARA', 1);
+insert into tariff (additional,id) values ('spring promo', 1);
+insert into tariff (additional,id) values ('spring promo', 2);
+insert into tariff (additional,id) values ('spring promo', 3);
+insert into tariff (additional,id) values ('spring promo', 4);
+insert into pricing (brand_id,currency,end_date,price,priority,product_id,create_date,tariff_id,id) values (1,'EUR','2020-12-31T23:59:59',35.5,0,35455,'2020-06-14T00:00',1,'987573a2-9f43-4513-804a-7a18d1c6870'::uuid);
+insert into pricing (brand_id,currency,end_date,price,priority,product_id,create_date,tariff_id,id) values (1,'EUR','2020-06-14T18:30',25.45,1,35455,'2020-06-14T15:00',2,'1075d56e-953d-48c5-92e2-33ccfc167aa8'::uuid);
+insert into pricing (brand_id,currency,end_date,price,priority,product_id,create_date,tariff_id,id) values (1,'EUR','2020-06-15T11:00',30.5,1,35455,'2020-06-15T00:00',3,'a30e649c-ef81-4b15-a138-7aef892af558'::uuid);
+insert into pricing (brand_id,currency,end_date,price,priority,product_id,create_date,tariff_id,id) values (1,'EUR','2020-12-31T23:59:59',38.95,1,35455,'2020-06-15T16:00',4,'40377a36-9614-4ac1-9fad-35b787d47466'::uuid);
